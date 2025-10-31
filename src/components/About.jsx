@@ -36,74 +36,74 @@ export default function About() {
         }
     };
 
-    const services = [
-        {
-            icon: Briefcase,
-            title: "Job Bank",
-            description: "Our Job Bank helps connect skilled professionals with businesses seeking qualified candidates. Employers can post openings and discover top talent, while job seekers can explore new career opportunities through verified business networks.",
-            gradient: "from-blue-500 to-cyan-500"
-        },
-        {
-            icon: Users,
-            title: "Business Support",
-            description: "We provide end-to-end business support, including guidance, mentorship, and networking opportunities to help entrepreneurs scale their ventures and overcome challenges.",
-            gradient: "from-purple-500 to-pink-500"
-        },
-        {
-            icon: Rocket,
-            title: "Micro Business & Startup Support",
-            description: "Our platform encourages small businesses and startups to grow by connecting them with investors, mentors, and potential collaborators. We believe in turning innovative ideas into successful enterprises.",
-            gradient: "from-orange-500 to-red-500"
-        },
-        {
-            icon: GraduationCap,
-            title: "Business Training",
-            description: "Through curated training programs, workshops, and seminars, Cochin Connect equips members with practical knowledge and skills essential for business growth and success. These sessions are conducted by industry experts and business leaders.",
-            gradient: "from-green-500 to-emerald-500"
-        },
-        {
-            icon: Award,
-            title: "Exclusive Member Benefits",
-            description: "Cochin Connect members enjoy priority access to events, mentorship programs, promotional opportunities, and more. Our goal is to make sure every member benefits personally and professionally from the network.",
-            gradient: "from-yellow-500 to-orange-500"
-        },
-        {
-            icon: Calendar,
-            title: "Business Expo & Networking Events",
-            description: "We host B2B expos, trade meets, and networking sessions designed to showcase your products and services while helping you form meaningful partnerships within the Cochin Connect community.",
-            gradient: "from-indigo-500 to-purple-500"
-        },
-        {
-            icon: UsersRound,
-            title: "Women's Business Forum",
-            description: "An empowering platform exclusively for women entrepreneurs to share experiences, learn from experts, and grow together. The forum focuses on women-led business development, mentorship, and success stories.",
-            gradient: "from-pink-500 to-rose-500"
-        },
-        {
-            icon: Megaphone,
-            title: "Marketing and Advertising Support",
-            description: "We assist members in marketing their businesses effectively through Cochin Connect's promotional channels. From digital campaigns to social media spotlights, our marketing team ensures your brand reaches the right audience.",
-            gradient: "from-cyan-500 to-blue-500"
-        },
-        {
-            icon: Globe,
-            title: "E-Business",
-            description: "For businesses looking to expand into digital and online markets, Cochin Connect offers guidance on e-commerce integration, digital transformation, and online branding. Our team helps traditional businesses adapt and succeed in the digital age.",
-            gradient: "from-teal-500 to-green-500"
-        },
-        {
-            icon: TrendingUp,
-            title: "Entrepreneurship Development Program",
-            description: "A structured initiative to encourage entrepreneurship by providing training, financial literacy, mentorship, and networking opportunities. We aim to create confident entrepreneurs capable of driving sustainable business growth.",
-            gradient: "from-violet-500 to-purple-500"
-        },
-        {
-            icon: Heart,
-            title: "Philanthropic Business Lounge",
-            description: "Cochin Connect also supports socially responsible business initiatives. Through the Philanthropic Business Lounge, we encourage members to engage in community development and corporate social responsibility programs that make a real difference.",
-            gradient: "from-red-500 to-pink-500"
-        }
-    ];
+    // const services = [
+    //     {
+    //         icon: Briefcase,
+    //         title: "Job Bank",
+    //         description: "Our Job Bank helps connect skilled professionals with businesses seeking qualified candidates. Employers can post openings and discover top talent, while job seekers can explore new career opportunities through verified business networks.",
+    //         gradient: "from-blue-500 to-cyan-500"
+    //     },
+    //     {
+    //         icon: Users,
+    //         title: "Business Support",
+    //         description: "We provide end-to-end business support, including guidance, mentorship, and networking opportunities to help entrepreneurs scale their ventures and overcome challenges.",
+    //         gradient: "from-purple-500 to-pink-500"
+    //     },
+    //     {
+    //         icon: Rocket,
+    //         title: "Micro Business & Startup Support",
+    //         description: "Our platform encourages small businesses and startups to grow by connecting them with investors, mentors, and potential collaborators. We believe in turning innovative ideas into successful enterprises.",
+    //         gradient: "from-orange-500 to-red-500"
+    //     },
+    //     {
+    //         icon: GraduationCap,
+    //         title: "Business Training",
+    //         description: "Through curated training programs, workshops, and seminars, Cochin Connect equips members with practical knowledge and skills essential for business growth and success. These sessions are conducted by industry experts and business leaders.",
+    //         gradient: "from-green-500 to-emerald-500"
+    //     },
+    //     {
+    //         icon: Award,
+    //         title: "Exclusive Member Benefits",
+    //         description: "Cochin Connect members enjoy priority access to events, mentorship programs, promotional opportunities, and more. Our goal is to make sure every member benefits personally and professionally from the network.",
+    //         gradient: "from-yellow-500 to-orange-500"
+    //     },
+    //     {
+    //         icon: Calendar,
+    //         title: "Business Expo & Networking Events",
+    //         description: "We host B2B expos, trade meets, and networking sessions designed to showcase your products and services while helping you form meaningful partnerships within the Cochin Connect community.",
+    //         gradient: "from-indigo-500 to-purple-500"
+    //     },
+    //     {
+    //         icon: UsersRound,
+    //         title: "Women's Business Forum",
+    //         description: "An empowering platform exclusively for women entrepreneurs to share experiences, learn from experts, and grow together. The forum focuses on women-led business development, mentorship, and success stories.",
+    //         gradient: "from-pink-500 to-rose-500"
+    //     },
+    //     {
+    //         icon: Megaphone,
+    //         title: "Marketing and Advertising Support",
+    //         description: "We assist members in marketing their businesses effectively through Cochin Connect's promotional channels. From digital campaigns to social media spotlights, our marketing team ensures your brand reaches the right audience.",
+    //         gradient: "from-cyan-500 to-blue-500"
+    //     },
+    //     {
+    //         icon: Globe,
+    //         title: "E-Business",
+    //         description: "For businesses looking to expand into digital and online markets, Cochin Connect offers guidance on e-commerce integration, digital transformation, and online branding. Our team helps traditional businesses adapt and succeed in the digital age.",
+    //         gradient: "from-teal-500 to-green-500"
+    //     },
+    //     {
+    //         icon: TrendingUp,
+    //         title: "Entrepreneurship Development Program",
+    //         description: "A structured initiative to encourage entrepreneurship by providing training, financial literacy, mentorship, and networking opportunities. We aim to create confident entrepreneurs capable of driving sustainable business growth.",
+    //         gradient: "from-violet-500 to-purple-500"
+    //     },
+    //     {
+    //         icon: Heart,
+    //         title: "Philanthropic Business Lounge",
+    //         description: "Cochin Connect also supports socially responsible business initiatives. Through the Philanthropic Business Lounge, we encourage members to engage in community development and corporate social responsibility programs that make a real difference.",
+    //         gradient: "from-red-500 to-pink-500"
+    //     }
+    // ];
 
     const benefits = [
         "Connect with verified business professionals",
@@ -194,7 +194,7 @@ export default function About() {
                     </motion.div>
 
                     {/* Services Grid */}
-                    <motion.div
+                    {/* <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -207,32 +207,32 @@ export default function About() {
                                 variants={itemVariants}
                                 whileHover={{ y: -8, scale: 1.02 }}
                                 className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 overflow-hidden"
-                            >
+                            > */}
                                 {/* Gradient Background on Hover */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-[#8a48e7]/5 to-[#5c21d2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                {/* <div className="absolute inset-0 bg-gradient-to-br from-[#8a48e7]/5 to-[#5c21d2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
                                 
                                 {/* Icon */}
-                                <div className="relative mb-4">
+                                {/* <div className="relative mb-4">
                                     <div className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                                         <service.icon className="w-7 h-7 text-white" />
                                     </div>
-                                </div>
+                                </div> */}
 
                                 {/* Content */}
-                                <div className="relative">
+                                {/* <div className="relative">
                                     <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#5c21d2] transition-colors">
                                         {service.title}
                                     </h3>
                                     <p className="text-gray-600 leading-relaxed text-sm">
                                         {service.description}
                                     </p>
-                                </div>
+                                </div> */}
 
                                 {/* Decorative Element */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8a48e7]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                                {/* <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8a48e7]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+                            </motion.div> */}
+                        {/* // ))} */}
+                    {/* </motion.div> */}
 
                     {/* Final CTA Section */}
                     <motion.div

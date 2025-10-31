@@ -39,11 +39,10 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <div className="flex items-center space-x-3 mb-6">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-xl blur-md opacity-50"></div>
                                 <img 
                                     src="/logo.png" 
                                     alt="Cochin Connect" 
-                                    className="relative w-12 h-12 rounded-xl" 
+                                    className="relative w-12 h-auto rounded-xl" 
                                 />
                             </div>
                             <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2]">

@@ -1,5 +1,23 @@
 import { motion } from 'framer-motion';
-import { Sparkles, Target, Users, Lightbulb, TrendingUp, Handshake, Award, ArrowRight } from 'lucide-react';
+import { 
+    Sparkles, 
+    Target, 
+    Users, 
+    Lightbulb, 
+    TrendingUp, 
+    Handshake, 
+    Award, 
+    ArrowRight,
+    Briefcase,
+    Rocket,
+    GraduationCap,
+    Calendar,
+    Mail,
+    Phone,
+    MapPin,
+    UsersRound
+} from 'lucide-react';
+import { Link } from 'react-router';
 
 export default function Home() {
     const containerVariants = {
@@ -30,6 +48,22 @@ export default function Home() {
         }
     };
 
+    const services = [
+        { icon: Briefcase, title: "Job Bank", desc: "Connect skilled professionals with opportunities", gradient: "from-blue-500 to-cyan-500" },
+        { icon: Users, title: "Business Support", desc: "End-to-end guidance and mentorship", gradient: "from-purple-500 to-pink-500" },
+        { icon: Rocket, title: "Startup Support", desc: "Empower your entrepreneurial journey", gradient: "from-orange-500 to-red-500" },
+        { icon: GraduationCap, title: "Training", desc: "Expert-led workshops and seminars", gradient: "from-green-500 to-emerald-500" },
+        { icon: Award, title: "Member Benefits", desc: "Exclusive access and opportunities", gradient: "from-yellow-500 to-orange-500" },
+        { icon: Calendar, title: "Events", desc: "Networking and expo opportunities", gradient: "from-indigo-500 to-purple-500" }
+    ];
+
+    const team = [
+        { name: "Leadership", role: "Strategic Vision", image: "👔" },
+        { name: "Mentors", role: "Industry Experts", image: "🎯" },
+        { name: "Support", role: "Always Here", image: "💼" },
+        { name: "Community", role: "Growing Together", image: "🤝" }
+    ];
+
     return (
         <div className="w-full bg-gradient-to-br from-purple-50 via-white to-violet-50 overflow-hidden">
             {/* Hero Section */}
@@ -49,7 +83,7 @@ export default function Home() {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="flex flex-col md:flex-row items-center justify-between gap-12 mb-20"
+                        className="flex flex-col md:flex-row items-center justify-between gap-12 mb-36"
                     >
                         {/* Text Content */}
                         <motion.div variants={itemVariants} className="flex-1 max-w-2xl">
@@ -113,7 +147,7 @@ export default function Home() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="mb-20"
+                        className="mb-36"
                     >
                         <div className="text-center mb-12">
                             <motion.div
@@ -160,52 +194,315 @@ export default function Home() {
                         </div>
                     </motion.div>
 
-                    {/* Cochin Business Club Section */}
+                    {/* Services Preview Section */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="mb-20"
+                        className="mb-36"
                     >
-                        <div className="relative bg-gradient-to-br from-[#8a48e7] to-[#5c21d2] rounded-3xl p-12 shadow-2xl overflow-hidden">
-                            {/* Decorative circles */}
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                                Our Services
+                            </h2>
+                            <p className="text-gray-600 max-w-2xl mx-auto">
+                                Comprehensive solutions designed to help your business thrive
+                            </p>
+                        </div>
 
-                            <div className="relative max-w-4xl mx-auto">
-                                <div className="text-center mb-8">
-                                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/30">
-                                        <Users className="w-8 h-8 text-white" />
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                            {services.map((service, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    whileHover={{ y: -5 }}
+                                    className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100"
+                                >
+                                    <div className={`w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                                        <service.icon className="w-6 h-6 text-white" />
                                     </div>
-                                    <h2 className="text-4xl font-bold text-white mb-4">
-                                        What is Cochin Business Club?
+                                    <h3 className="text-lg font-bold text-gray-800 mb-2">{service.title}</h3>
+                                    <p className="text-sm text-gray-600">{service.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <div className="text-center">
+                            <Link to="/services">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="group px-8 py-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                                >
+                                    View All Services
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </motion.button>
+                            </Link>
+                        </div>
+                    </motion.div>
+
+                    {/* About Preview Section */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="mb-44"
+                    >
+                        <div className="bg-gradient-to-r from-white to-purple-50 rounded-3xl p-8 md:p-12 shadow-xl border border-purple-100 overflow-hidden relative">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-[#8a48e7]/5 rounded-full blur-3xl"></div>
+                            
+                            <div className="relative grid md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <span className="px-4 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm font-semibold shadow-lg inline-block mb-4">
+                                        About Us
+                                    </span>
+                                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                                        Why Choose Cochin Connect?
                                     </h2>
-                                    <div className="w-24 h-1 bg-white/50 mx-auto rounded-full"></div>
+                                    <p className="text-gray-600 mb-6 leading-relaxed">
+                                        We're more than just a networking platform. We're a community dedicated to empowering businesses, fostering collaboration, and creating opportunities for growth across Kerala and beyond.
+                                    </p>
+                                    <Link to="/about">
+                                        <motion.button
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="group px-6 py-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                                        >
+                                            Learn More About Us
+                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        </motion.button>
+                                    </Link>
                                 </div>
-
-                                <div className="space-y-6 text-white/95 text-lg leading-relaxed">
-                                    <p className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                        The <strong>Cochin Business Club (CBC)</strong> is a dedicated division of Cochin Connect that brings together business professionals from diverse sectors under one umbrella.
-                                    </p>
-                                    <p className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                        CBC provides a platform for <strong>mutual collaboration, mentorship, and business development</strong>. Through regular meetings, networking sessions, and knowledge-sharing events, members can enhance their business reach and visibility.
-                                    </p>
-                                    <p className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                                        Our aim is to nurture a culture of <strong>trust, cooperation, and innovation</strong> among members, encouraging collective progress.
-                                    </p>
-                                    <div className="bg-white text-[#5c21d2] rounded-2xl p-8 shadow-xl mt-8 text-center">
-                                        <Sparkles className="w-10 h-10 mx-auto mb-4 text-[#8a48e7]" />
-                                        <p className="font-bold text-xl">
-                                            By joining the Cochin Business Club, you become part of a forward-thinking community that believes in growing together — connecting ideas, people, and opportunities.
-                                        </p>
-                                    </div>
+                                
+                                <div className="grid grid-cols-2 gap-4">
+                                    {[
+                                        { label: "Active Members", value: "500+" },
+                                        { label: "Business Partners", value: "200+" },
+                                        { label: "Events Annually", value: "50+" },
+                                        { label: "Success Rate", value: "95%" }
+                                    ].map((stat, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: index * 0.1 }}
+                                            className="bg-white rounded-xl p-4 shadow-lg text-center border border-purple-100"
+                                        >
+                                            <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-1">
+                                                {stat.value}
+                                            </div>
+                                            <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
+                                        </motion.div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </motion.div>
 
-                    {/* Call to Action */}
+                    {/* Team Preview Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="mb-36"
+                    >
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                                Our Team
+                            </h2>
+                            <p className="text-gray-600 max-w-2xl mx-auto">
+                                Dedicated professionals committed to your success
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-4 gap-6 mb-8">
+                            {team.map((member, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    whileHover={{ y: -5 }}
+                                    className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100 text-center"
+                                >
+                                    <div className="w-16 h-16 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                                        {member.image}
+                                    </div>
+                                    <h3 className="font-bold text-gray-800 mb-1">{member.name}</h3>
+                                    <p className="text-sm text-gray-600">{member.role}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <div className="text-center">
+                            <Link to="/team">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className="group px-8 py-3 bg-white text-[#5c21d2] border-2 border-[#8a48e7] rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 hover:bg-gradient-to-r hover:from-[#8a48e7] hover:to-[#5c21d2] hover:text-white"
+                                >
+                                    Meet Our Team
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </motion.button>
+                            </Link>
+                        </div>
+                    </motion.div>
+
+                    {/* Contact Preview Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="mb-36"
+                    >
+                        <div className="bg-gradient-to-br from-[#8a48e7] to-[#5c21d2] rounded-3xl p-8 md:p-12 shadow-2xl text-white relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                            
+                            <div className="relative">
+                                <div className="text-center mb-8">
+                                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                                    <p className="text-white/90 max-w-2xl mx-auto">
+                                        Have questions? We're here to help you grow your business network
+                                    </p>
+                                </div>
+
+                                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                                    <motion.a
+                                        href="mailto:info@cochinconnect.in"
+                                        whileHover={{ scale: 1.05 }}
+                                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all text-center"
+                                    >
+                                        <Mail className="w-8 h-8 mx-auto mb-3" />
+                                        <div className="font-semibold mb-1">Email Us</div>
+                                        <div className="text-sm text-white/80">info@cochinconnect.in</div>
+                                    </motion.a>
+
+                                    <motion.a
+                                        href="tel:+919946689000"
+                                        whileHover={{ scale: 1.05 }}
+                                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all text-center"
+                                    >
+                                        <Phone className="w-8 h-8 mx-auto mb-3" />
+                                        <div className="font-semibold mb-1">Call Us</div>
+                                        <div className="text-sm text-white/80">+91 99466 89000</div>
+                                    </motion.a>
+
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all text-center"
+                                    >
+                                        <MapPin className="w-8 h-8 mx-auto mb-3" />
+                                        <div className="font-semibold mb-1">Visit Us</div>
+                                        <div className="text-sm text-white/80">Cheranelloor, Kochi</div>
+                                    </motion.div>
+                                </div>
+
+                                <div className="text-center">
+                                    <Link to="/contact">
+                                        <motion.button
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="group px-8 py-3 bg-white text-[#5c21d2] rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2"
+                                        >
+                                            Contact Us
+                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        </motion.button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Cochin Business Club Section - Updated to Two Blocks (Information + CTA) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="mb-36"
+                    >
+                        <div className="text-center mb-12">
+                            <div className="inline-block p-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-full shadow-lg mb-4">
+                                <UsersRound className="w-10 h-10 text-white" />
+                            </div>
+                            <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                                What is Cochin Business Club?
+                            </h2>
+                            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+                                The dedicated division of Cochin Connect for serious business growth.
+                            </p>
+                        </div>
+
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            {/* Combined Block: Dedicated Network + Growth Platform */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.1, duration: 0.6 }}
+                                className="relative bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-[#8a48e7] z-30"
+                            >
+                                <div className="space-y-6">
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 p-3 bg-purple-100 rounded-full border border-purple-300">
+                                            <Users className="w-6 h-6 text-[#8a48e7]" />
+                                        </div>
+                                        <div className="ml-5">
+                                            <h3 className="text-xl font-bold text-gray-800 mb-2">Dedicated Business Network</h3>
+                                            <p className="text-gray-600 leading-relaxed">
+                                                The <strong className="text-[#5c21d2]">Cochin Business Club (CBC)</strong> is a dedicated division of Cochin Connect that brings together business professionals from diverse sectors under one umbrella.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="h-px bg-purple-100 mx-auto w-11/12"></div> {/* Separator Line */}
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 p-3 bg-purple-100 rounded-full border border-purple-300">
+                                            <Handshake className="w-6 h-6 text-[#5c21d2]" />
+                                        </div>
+                                        <div className="ml-5">
+                                            <h3 className="text-xl font-bold text-gray-800 mb-2">Platform for Collaboration and Growth</h3>
+                                            <p className="text-gray-600 leading-relaxed">
+                                                CBC provides a platform for <strong className="text-gray-900">mutual collaboration, mentorship, and business development</strong>. Through regular meetings, networking sessions, and knowledge-sharing events, members can enhance their business reach and visibility.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Block 2: Value Proposition / CTA */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.3, duration: 0.6 }}
+                                className="relative bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] p-8 rounded-3xl shadow-2xl z-10"
+                            >
+                                <div className="flex items-start text-white">
+                                    <div className="flex-shrink-0 p-3 bg-white/20 rounded-full border border-white/50">
+                                        <TrendingUp className="w-6 h-6 text-white" />
+                                    </div>
+                                    <div className="ml-5">
+                                        <h3 className="text-xl font-bold mb-2">Your Success is Our Goal</h3>
+                                        <p className="leading-relaxed">
+                                            <strong className="text-yellow-300">Grow Together</strong>: By joining the Cochin Business Club, you become part of a forward-thinking community that believes in growing together — connecting ideas, people, and opportunities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </motion.div>
+
+                    {/* Final CTA */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}

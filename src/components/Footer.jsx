@@ -27,7 +27,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+        <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden poppins-regular">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#8a48e7]/20 to-[#5c21d2]/20 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#5c21d2]/20 to-[#8a48e7]/20 rounded-full blur-3xl"></div>
@@ -45,7 +45,7 @@ export default function Footer() {
                                     className="relative w-12 h-auto rounded-xl" 
                                 />
                             </div>
-                            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2]">
+                            <h3 className="text-2xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2]">
                                 Cochin Connect
                             </h3>
                         </div>
@@ -70,7 +70,7 @@ export default function Footer() {
 
                     {/* Company Links */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white flex items-center">
+                        <h4 className="text-lg poppins-semibold mb-6 text-white flex items-center">
                             <span className="w-8 h-0.5 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mr-3"></span>
                             Company
                         </h4>
@@ -91,7 +91,7 @@ export default function Footer() {
 
                     {/* Resources Links */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white flex items-center">
+                        <h4 className="text-lg poppins-semibold mb-6 text-white flex items-center">
                             <span className="w-8 h-0.5 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mr-3"></span>
                             Resources
                         </h4>
@@ -112,7 +112,7 @@ export default function Footer() {
 
                     {/* Contact & Newsletter */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 text-white flex items-center">
+                        <h4 className="text-lg poppins-semibold mb-6 text-white flex items-center">
                             <span className="w-8 h-0.5 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mr-3"></span>
                             Get in Touch
                         </h4>

@@ -117,12 +117,12 @@ export default function Services() {
     ];
 
     return (
-        <div className="w-full bg-gradient-to-br from-purple-50 via-white to-violet-50 overflow-hidden">
+        <div className="w-full bg-gradient-to-br from-purple-50 via-white to-violet-50 overflow-hidden poppins-regular">
             <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="relative w-full pt-32 pb-20 px-6"
+                className="relative w-full pt-32 pb-36 px-6"
             >
                 {/* Decorative Elements */}
                 <div className="absolute top-20 right-10 w-96 h-96 bg-[#8a48e7]/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse"></div>
@@ -137,14 +137,14 @@ export default function Services() {
                         className="text-center mb-16"
                     >
                         <motion.div variants={itemVariants} className="inline-block mb-6">
-                            <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm font-semibold shadow-lg">
+                            <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm poppins-semibold shadow-lg">
                                 Our Services
                             </span>
                         </motion.div>
 
                         <motion.h1
                             variants={itemVariants}
-                            className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6"
+                            className="text-4xl md:text-6xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6"
                         >
                             Comprehensive Business Solutions
                         </motion.h1>
@@ -163,7 +163,7 @@ export default function Services() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-36"
                     >
                         {stats.map((stat, index) => (
                             <motion.div
@@ -177,7 +177,7 @@ export default function Services() {
                                 <div className="w-12 h-12 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-xl flex items-center justify-center mx-auto mb-4">
                                     <stat.icon className="w-6 h-6 text-white" />
                                 </div>
-                                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-2">
+                                <div className="text-3xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-2">
                                     {stat.value}
                                 </div>
                                 <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -190,7 +190,7 @@ export default function Services() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-36"
                     >
                         {services.map((service, index) => (
                             <motion.div
@@ -211,7 +211,7 @@ export default function Services() {
 
                                 {/* Content */}
                                 <div className="relative">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#5c21d2] transition-colors">
+                                    <h3 className="text-xl poppins-bold text-gray-800 mb-3 group-hover:text-[#5c21d2] transition-colors">
                                         {service.title}
                                     </h3>
                                     <p className="text-gray-600 leading-relaxed text-sm">
@@ -231,10 +231,10 @@ export default function Services() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="mb-20"
+                        className="mb-36 p-10"
                     >
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                            <h2 className="text-3xl md:text-4xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
                                 Why Choose Our Services?
                             </h2>
                             <div className="w-24 h-1 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mx-auto rounded-full"></div>
@@ -257,7 +257,7 @@ export default function Services() {
                                     <div className="w-14 h-14 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-xl flex items-center justify-center mx-auto mb-4">
                                         <item.icon className="w-7 h-7 text-white" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
+                                    <h3 className="text-xl poppins-bold text-gray-800 mb-3">{item.title}</h3>
                                     <p className="text-gray-600">{item.desc}</p>
                                 </motion.div>
                             ))}
@@ -277,7 +277,7 @@ export default function Services() {
                             
                             <div className="relative text-center max-w-3xl mx-auto">
                                 <Sparkles className="w-16 h-16 text-white mx-auto mb-6" />
-                                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                                <h2 className="text-3xl md:text-4xl poppins-bold text-white mb-6">
                                     Ready to Transform Your Business?
                                 </h2>
                                 <p className="text-xl text-white/95 mb-8 leading-relaxed">
@@ -287,7 +287,7 @@ export default function Services() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="group px-10 py-4 bg-white text-[#5c21d2] rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3"
+                                    className="group px-10 py-4 bg-white text-[#5c21d2] rounded-full poppins-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3"
                                 >
                                     Get Started Today
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

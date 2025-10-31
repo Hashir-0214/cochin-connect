@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { 
-    Sparkles, 
-    Target, 
-    Users, 
-    Lightbulb, 
-    TrendingUp, 
-    Handshake, 
-    Award, 
+import {
+    Sparkles,
+    Target,
+    Users,
+    Lightbulb,
+    TrendingUp,
+    Handshake,
+    Award,
     ArrowRight,
     Briefcase,
     Rocket,
@@ -15,7 +15,10 @@ import {
     Mail,
     Phone,
     MapPin,
-    UsersRound
+    UsersRound,
+    Contact,
+    Contact2,
+    Link2
 } from 'lucide-react';
 import { Link } from 'react-router';
 
@@ -65,7 +68,7 @@ export default function Home() {
     ];
 
     return (
-        <div className="w-full bg-gradient-to-br from-purple-50 via-white to-violet-50 overflow-hidden">
+        <div className="w-full bg-gradient-to-br from-purple-50 via-white to-violet-50 overflow-hidden poppins-regular">
             {/* Hero Section */}
             <motion.section
                 initial={{ opacity: 0 }}
@@ -93,12 +96,12 @@ export default function Home() {
                                 transition={{ duration: 0.8 }}
                                 className="inline-block mb-6"
                             >
-                                <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm font-semibold shadow-lg">
+                                <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm poppins-semibold shadow-lg">
                                     Kerala's First Business Network
                                 </span>
                             </motion.div>
 
-                            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6 leading-tight">
+                            <h2 className="text-3xl md:text-4xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6 leading-tight">
                                 Business — Now Everywhere with Cochin Connect
                             </h2>
 
@@ -108,9 +111,6 @@ export default function Home() {
                                 </p>
                                 <p>
                                     With Cochin Connect, we bring together a vibrant community of business owners, startups, investors, and professionals — all on one digital platform. Whether you are looking to expand your business network, discover new opportunities, or connect with like-minded professionals, Cochin Connect is your go-to destination.
-                                </p>
-                                <p className="font-semibold text-[#5c21d2]">
-                                    Our goal is to make business networking more accessible, efficient, and result-driven, enabling you to grow and thrive in today's competitive world.
                                 </p>
                             </div>
                         </motion.div>
@@ -131,7 +131,7 @@ export default function Home() {
                                         className="w-64 mx-auto mb-6"
                                     />
                                     <div className="text-center">
-                                        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-2">
+                                        <h1 className="text-5xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-2">
                                             Cochin Connect.
                                         </h1>
                                         <p className="text-xl text-gray-600 font-medium">Connect. Discover. Experience.</p>
@@ -160,7 +160,7 @@ export default function Home() {
                                     <Target className="w-8 h-8 text-white" />
                                 </div>
                             </motion.div>
-                            <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                            <h2 className="text-4xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
                                 OUR VISION
                             </h2>
                             <div className="w-24 h-1 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mx-auto rounded-full"></div>
@@ -203,7 +203,7 @@ export default function Home() {
                         className="mb-36"
                     >
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                            <h2 className="text-3xl md:text-4xl poppins-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
                                 Our Services
                             </h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -225,7 +225,7 @@ export default function Home() {
                                     <div className={`w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                                         <service.icon className="w-6 h-6 text-white" />
                                     </div>
-                                    <h3 className="text-lg font-bold text-gray-800 mb-2">{service.title}</h3>
+                                    <h3 className="text-lg poppins-bold text-gray-800 mb-2">{service.title}</h3>
                                     <p className="text-sm text-gray-600">{service.desc}</p>
                                 </motion.div>
                             ))}
@@ -236,7 +236,7 @@ export default function Home() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="group px-8 py-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                                    className="group px-8 py-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full poppins-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
                                 >
                                     View All Services
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -255,13 +255,13 @@ export default function Home() {
                     >
                         <div className="bg-gradient-to-r from-white to-purple-50 rounded-3xl p-8 md:p-12 shadow-xl border border-purple-100 overflow-hidden relative">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-[#8a48e7]/5 rounded-full blur-3xl"></div>
-                            
+
                             <div className="relative grid md:grid-cols-2 gap-8 items-center">
                                 <div>
-                                    <span className="px-4 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm font-semibold shadow-lg inline-block mb-4">
+                                    <span className="px-4 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm poppins-semibold shadow-lg inline-block mb-4">
                                         About Us
                                     </span>
-                                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                                    <h2 className="text-3xl poppins-bold text-gray-800 mb-4">
                                         Why Choose Cochin Connect?
                                     </h2>
                                     <p className="text-gray-600 mb-6 leading-relaxed">
@@ -271,14 +271,14 @@ export default function Home() {
                                         <motion.button
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
-                                            className="group px-6 py-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                                            className="group px-6 py-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full poppins-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
                                         >
                                             Learn More About Us
                                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </motion.button>
                                     </Link>
                                 </div>
-                                
+
                                 <div className="grid grid-cols-2 gap-4">
                                     {[
                                         { label: "Active Members", value: "500+" },
@@ -294,7 +294,7 @@ export default function Home() {
                                             transition={{ delay: index * 0.1 }}
                                             className="bg-white rounded-xl p-4 shadow-lg text-center border border-purple-100"
                                         >
-                                            <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-1">
+                                            <div className="text-2xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-1">
                                                 {stat.value}
                                             </div>
                                             <div className="text-xs text-gray-600 font-medium">{stat.label}</div>
@@ -314,7 +314,7 @@ export default function Home() {
                         className="mb-36"
                     >
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                            <h2 className="text-3xl md:text-4xl poppins-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
                                 Our Team
                             </h2>
                             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -336,7 +336,7 @@ export default function Home() {
                                     <div className="w-16 h-16 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
                                         {member.image}
                                     </div>
-                                    <h3 className="font-bold text-gray-800 mb-1">{member.name}</h3>
+                                    <h3 className="poppins-bold text-gray-800 mb-1">{member.name}</h3>
                                     <p className="text-sm text-gray-600">{member.role}</p>
                                 </motion.div>
                             ))}
@@ -347,7 +347,7 @@ export default function Home() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="group px-8 py-3 bg-white text-[#5c21d2] border-2 border-[#8a48e7] rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 hover:bg-gradient-to-r hover:from-[#8a48e7] hover:to-[#5c21d2] hover:text-white"
+                                    className="group px-8 py-3 bg-white text-[#5c21d2] border-2 border-[#8a48e7] rounded-full poppins-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 hover:bg-gradient-to-r hover:from-[#8a48e7] hover:to-[#5c21d2] hover:text-white cursor-pointer"
                                 >
                                     Meet Our Team
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -356,69 +356,38 @@ export default function Home() {
                         </div>
                     </motion.div>
 
-                    {/* Contact Preview Section */}
+                    {/* Let’s Connect Section */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="mb-36"
+                        className="relative mb-36"
                     >
-                        <div className="bg-gradient-to-br from-[#8a48e7] to-[#5c21d2] rounded-3xl p-8 md:p-12 shadow-2xl text-white relative overflow-hidden">
+                        <div className="relative bg-gradient-to-br from-[#8a48e7] to-[#5c21d2] rounded-3xl p-12 md:p-16 shadow-2xl overflow-hidden">
+                            {/* Decorative circles */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-                            
-                            <div className="relative">
-                                <div className="text-center mb-8">
-                                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-                                    <p className="text-white/90 max-w-2xl mx-auto">
-                                        Have questions? We're here to help you grow your business network
-                                    </p>
-                                </div>
 
-                                <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                    <motion.a
-                                        href="mailto:info@cochinconnect.in"
+                            <div className="relative text-center max-w-3xl mx-auto poppins-regular">
+                                <Link2 className="w-12 h-12 text-white mx-auto mb-6" />
+                                <h2 className="text-2xl md:text-3xl poppins-bold text-white mb-6">
+                                    Together, We Grow Stronger
+                                </h2>
+                                <p className="text-md max-w-3xl text-white/90 mb-2">
+                                    Contact us today and be part of a community that believes in <strong>collaboration over competition</strong>.
+                                </p>
+                                <p className='text-md text-white/90 mb-8'><span className='text-lg poppins-semibold'>Have questions?</span> We're here to help you grow your business network</p>
+                                <Link to="/contact">
+                                    <motion.button
                                         whileHover={{ scale: 1.05 }}
-                                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all text-center"
+                                        whileTap={{ scale: 0.95 }}
+                                        className="group px-10 py-4 bg-white text-[#5c21d2] rounded-full poppins-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                     >
-                                        <Mail className="w-8 h-8 mx-auto mb-3" />
-                                        <div className="font-semibold mb-1">Email Us</div>
-                                        <div className="text-sm text-white/80">info@cochinconnect.in</div>
-                                    </motion.a>
-
-                                    <motion.a
-                                        href="tel:+919946689000"
-                                        whileHover={{ scale: 1.05 }}
-                                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all text-center"
-                                    >
-                                        <Phone className="w-8 h-8 mx-auto mb-3" />
-                                        <div className="font-semibold mb-1">Call Us</div>
-                                        <div className="text-sm text-white/80">+91 99466 89000</div>
-                                    </motion.a>
-
-                                    <motion.div
-                                        whileHover={{ scale: 1.05 }}
-                                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all text-center"
-                                    >
-                                        <MapPin className="w-8 h-8 mx-auto mb-3" />
-                                        <div className="font-semibold mb-1">Visit Us</div>
-                                        <div className="text-sm text-white/80">Cheranelloor, Kochi</div>
-                                    </motion.div>
-                                </div>
-
-                                <div className="text-center">
-                                    <Link to="/contact">
-                                        <motion.button
-                                            whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            className="group px-8 py-3 bg-white text-[#5c21d2] rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2"
-                                        >
-                                            Contact Us
-                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                        </motion.button>
-                                    </Link>
-                                </div>
+                                        Let's Connect
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </motion.button>
+                                </Link>
                             </div>
                         </div>
                     </motion.div>
@@ -435,7 +404,7 @@ export default function Home() {
                             <div className="inline-block p-3 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-full shadow-lg mb-4">
                                 <UsersRound className="w-10 h-10 text-white" />
                             </div>
-                            <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
+                            <h2 className="text-4xl poppins-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-4">
                                 What is Cochin Business Club?
                             </h2>
                             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
@@ -458,7 +427,7 @@ export default function Home() {
                                             <Users className="w-6 h-6 text-[#8a48e7]" />
                                         </div>
                                         <div className="ml-5">
-                                            <h3 className="text-xl font-bold text-gray-800 mb-2">Dedicated Business Network</h3>
+                                            <h3 className="text-xl poppins-bold text-gray-800 mb-2">Dedicated Business Network</h3>
                                             <p className="text-gray-600 leading-relaxed">
                                                 The <strong className="text-[#5c21d2]">Cochin Business Club (CBC)</strong> is a dedicated division of Cochin Connect that brings together business professionals from diverse sectors under one umbrella.
                                             </p>
@@ -470,7 +439,7 @@ export default function Home() {
                                             <Handshake className="w-6 h-6 text-[#5c21d2]" />
                                         </div>
                                         <div className="ml-5">
-                                            <h3 className="text-xl font-bold text-gray-800 mb-2">Platform for Collaboration and Growth</h3>
+                                            <h3 className="text-xl poppins-bold text-gray-800 mb-2">Platform for Collaboration and Growth</h3>
                                             <p className="text-gray-600 leading-relaxed">
                                                 CBC provides a platform for <strong className="text-gray-900">mutual collaboration, mentorship, and business development</strong>. Through regular meetings, networking sessions, and knowledge-sharing events, members can enhance their business reach and visibility.
                                             </p>
@@ -492,7 +461,7 @@ export default function Home() {
                                         <TrendingUp className="w-6 h-6 text-white" />
                                     </div>
                                     <div className="ml-5">
-                                        <h3 className="text-xl font-bold mb-2">Your Success is Our Goal</h3>
+                                        <h3 className="text-xl poppins-bold mb-2">Your Success is Our Goal</h3>
                                         <p className="leading-relaxed">
                                             <strong className="text-yellow-300">Grow Together</strong>: By joining the Cochin Business Club, you become part of a forward-thinking community that believes in growing together — connecting ideas, people, and opportunities.
                                         </p>
@@ -512,14 +481,14 @@ export default function Home() {
                     >
                         <div className="relative inline-block">
                             <div className="relative rounded-3xl p-12">
-                                <h3 className="text-3xl font-bold text-gray-800 mb-4">Join Cochin Connect.</h3>
-                                <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] font-bold mb-6">
+                                <h3 className="text-3xl poppins-bold text-gray-800 mb-4">Join Cochin Connect.</h3>
+                                <p className="text-2xl max-w-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] poppins-bold mb-6">
                                     Experience the future of business networking — where connections create success.
                                 </p>
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="group px-8 py-4 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                                    className="group px-8 py-4 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full poppins-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
                                 >
                                     Get Started Today
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

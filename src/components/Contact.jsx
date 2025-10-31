@@ -104,14 +104,14 @@ export default function Contact() {
                         className="text-center mb-16"
                     >
                         <motion.div variants={itemVariants} className="inline-block mb-6">
-                            <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm font-semibold shadow-lg">
+                            <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm poppins-semibold shadow-lg">
                                 Get In Touch
                             </span>
                         </motion.div>
 
                         <motion.h1
                             variants={itemVariants}
-                            className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6"
+                            className="text-4xl md:text-6xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6"
                         >
                             Let's Connect
                         </motion.h1>
@@ -146,8 +146,8 @@ export default function Contact() {
                                     <div className="w-16 h-16 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                                         <info.icon className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-800 mb-2">{info.title}</h3>
-                                    <p className="text-lg text-[#5c21d2] font-semibold mb-1">{info.details}</p>
+                                    <h3 className="text-xl poppins-bold text-gray-800 mb-2">{info.title}</h3>
+                                    <p className="text-lg text-[#5c21d2] poppins-semibold mb-1">{info.details}</p>
                                     <p className="text-sm text-gray-600">{info.subtext}</p>
                                 </div>
 
@@ -171,7 +171,7 @@ export default function Contact() {
                                     <div className="w-12 h-12 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-xl flex items-center justify-center">
                                         <MessageSquare className="w-6 h-6 text-white" />
                                     </div>
-                                    <h2 className="text-2xl font-bold text-gray-800">Send us a Message</h2>
+                                    <h2 className="text-2xl poppins-bold text-gray-800">Send us a Message</h2>
                                 </div>
 
                                 {submitted && (
@@ -188,7 +188,7 @@ export default function Contact() {
                                 <div className="space-y-6">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                            <label className="block text-sm poppins-semibold text-gray-700 mb-2">
                                                 Your Name *
                                             </label>
                                             <div className="relative">
@@ -205,7 +205,7 @@ export default function Contact() {
                                         </div>
 
                                         <div>
-                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                            <label className="block text-sm poppins-semibold text-gray-700 mb-2">
                                                 Email Address *
                                             </label>
                                             <div className="relative">
@@ -224,7 +224,7 @@ export default function Contact() {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
-                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                            <label className="block text-sm poppins-semibold text-gray-700 mb-2">
                                                 Phone Number
                                             </label>
                                             <div className="relative">
@@ -241,7 +241,7 @@ export default function Contact() {
                                         </div>
 
                                         <div>
-                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                            <label className="block text-sm poppins-semibold text-gray-700 mb-2">
                                                 Company Name
                                             </label>
                                             <div className="relative">
@@ -259,7 +259,7 @@ export default function Contact() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                        <label className="block text-sm poppins-semibold text-gray-700 mb-2">
                                             Message *
                                         </label>
                                         <textarea
@@ -276,7 +276,7 @@ export default function Contact() {
                                         onClick={handleSubmit}
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
-                                        className="w-full py-4 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 group"
+                                        className="w-full py-4 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-xl poppins-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 group"
                                     >
                                         Send Message
                                         <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -299,7 +299,7 @@ export default function Contact() {
                                     <div className="w-10 h-10 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-lg flex items-center justify-center">
                                         <Clock className="w-5 h-5 text-white" />
                                     </div>
-                                    <h3 className="text-lg font-bold text-gray-800">Office Hours</h3>
+                                    <h3 className="text-lg poppins-bold text-gray-800">Office Hours</h3>
                                 </div>
                                 <div className="space-y-3">
                                     {officeHours.map((schedule, index) => (
@@ -314,13 +314,13 @@ export default function Contact() {
                             {/* Quick Info */}
                             <div className="bg-gradient-to-br from-[#8a48e7] to-[#5c21d2] rounded-2xl p-6 shadow-lg text-white">
                                 <Sparkles className="w-10 h-10 mb-4" />
-                                <h3 className="text-xl font-bold mb-3">Need Immediate Help?</h3>
+                                <h3 className="text-xl poppins-bold mb-3">Need Immediate Help?</h3>
                                 <p className="text-white/90 mb-4 text-sm leading-relaxed">
                                     Our team is ready to assist you with any questions about joining Cochin Connect or our services.
                                 </p>
                                 <a
                                     href="tel:+919999999999"
-                                    className="inline-flex items-center gap-2 bg-white text-[#5c21d2] px-5 py-2 rounded-lg font-semibold hover:shadow-lg transition-all text-sm"
+                                    className="inline-flex items-center gap-2 bg-white text-[#5c21d2] px-5 py-2 rounded-lg poppins-semibold hover:shadow-lg transition-all text-sm"
                                 >
                                     <Phone className="w-4 h-4" />
                                     Call Now
@@ -332,7 +332,7 @@ export default function Contact() {
                                 <div className="aspect-square bg-gradient-to-br from-[#8a48e7]/10 to-[#5c21d2]/10 rounded-xl flex items-center justify-center">
                                     <div className="text-center">
                                         <MapPin className="w-12 h-12 text-[#5c21d2] mx-auto mb-2" />
-                                        <p className="text-sm font-semibold text-gray-700">Kochi, Kerala</p>
+                                        <p className="text-sm poppins-semibold text-gray-700">Kochi, Kerala</p>
                                         <p className="text-xs text-gray-600">India</p>
                                     </div>
                                 </div>

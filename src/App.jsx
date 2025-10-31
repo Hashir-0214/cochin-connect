@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 const Projects = () => (
   <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="py-20 px-6 bg-white">
     <div className="max-w-6xl mx-auto text-center">
-      <h2 className="text-3xl font-[Helvetica] font-semibold mb-4">Projects & Case Studies</h2>
+      <h2 className="text-3xl font-[Helvetica] poppins-semibold mb-4">Projects & Case Studies</h2>
       <p className="text-gray-700 mb-8">Our projects showcase successful implementations of growth strategies and digital transformations.</p>
     </div>
   </motion.section>
@@ -20,7 +20,7 @@ const Projects = () => (
 const Team = () => (
   <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="py-20 px-6 bg-gray-50">
     <div className="max-w-6xl mx-auto text-center">
-      <h2 className="text-3xl font-[Helvetica] font-semibold mb-8">Our Team</h2>
+      <h2 className="text-3xl font-[Helvetica] poppins-semibold mb-8">Our Team</h2>
       <p className="text-gray-700">Meet our experts who bring ideas to life with innovation and experience.</p>
     </div>
   </motion.section>

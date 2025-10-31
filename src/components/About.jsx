@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion';
-import { 
-    Briefcase, 
-    Users, 
-    Rocket, 
-    GraduationCap, 
-    Award, 
-    Calendar, 
-    UsersRound, 
-    Megaphone, 
-    Globe, 
-    TrendingUp, 
+import {
+    Briefcase,
+    Users,
+    Rocket,
+    GraduationCap,
+    Award,
+    Calendar,
+    UsersRound,
+    Megaphone,
+    Globe,
+    TrendingUp,
     Heart,
     Sparkles,
     ArrowRight,
-    CheckCircle
+    CheckCircle,
+    Goal
 } from 'lucide-react';
 
 export default function About() {
@@ -115,7 +116,7 @@ export default function About() {
     ];
 
     return (
-        <div className="w-full bg-gradient-to-br from-purple-50 via-white to-violet-50 overflow-hidden">
+        <div className="w-full bg-gradient-to-br from-purple-50 via-white to-violet-50 overflow-hidden poppins-regular">
             {/* Hero Section */}
             <motion.section
                 initial={{ opacity: 0 }}
@@ -133,17 +134,17 @@ export default function About() {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="text-center mb-16"
+                        className="text-center mb-36"
                     >
                         <motion.div variants={itemVariants} className="inline-block mb-6">
-                            <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm font-semibold shadow-lg">
+                            <span className="px-5 py-2 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-full text-sm poppins-semibold shadow-lg">
                                 Why Choose Us
                             </span>
                         </motion.div>
 
                         <motion.h1
                             variants={itemVariants}
-                            className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6"
+                            className="text-4xl md:text-6xl poppins-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mb-6"
                         >
                             Your Business Community Partner
                         </motion.h1>
@@ -163,16 +164,53 @@ export default function About() {
                         </motion.p>
                     </motion.div>
 
+                    {/* Our Goal */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        className="group mb-36 max-w-7xl mx-auto relative bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-purple-100 mb-20 overflow-hidden"
+                    >
+                        {/* Gradient Background on Hover */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#8a48e7]/5 to-[#5c21d2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                        {/* Icon */}
+                        <div className="relative w-fit mb-4 mx-auto">
+                            <div className="w-14 h-14 bg-gradient-to-br from-[#8a48e7] to-[#5c21d2] rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <Goal className="w-7 h-7 text-white" />
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="relative text-center">
+                            <h3 className="text-2xl md:text-3xl uppercase poppins-bold mb-4 text-[#5c21d2] transition-colors">
+                                Our Goal
+                            </h3>
+                            <div className="w-24 h-1 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] mx-auto rounded-full mb-6"></div>
+                            <p className="max-w-2xl mx-auto text-gray-600 leading-relaxed text-sm mx-auto">
+                                Our goal is to make business networking more
+                                <span className="poppins-semibold"> accessible, efficient, and result-driven</span>,
+                                enabling you to grow and thrive in today's competitive world.
+                            </p>
+                        </div>
+
+                        {/* Decorative Element */}
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8a48e7]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    </motion.div>
+
+
                     {/* Benefits Grid */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="mb-20"
+                        className="mb-36"
                     >
                         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-purple-100">
-                            <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+                            <h2 className="text-2xl poppins-bold text-gray-800 mb-8 text-center">
                                 Here's what makes us the right choice for you
                             </h2>
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -208,19 +246,19 @@ export default function About() {
                                 whileHover={{ y: -8, scale: 1.02 }}
                                 className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 overflow-hidden"
                             > */}
-                                {/* Gradient Background on Hover */}
-                                {/* <div className="absolute inset-0 bg-gradient-to-br from-[#8a48e7]/5 to-[#5c21d2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
-                                
-                                {/* Icon */}
-                                {/* <div className="relative mb-4">
+                    {/* Gradient Background on Hover */}
+                    {/* <div className="absolute inset-0 bg-gradient-to-br from-[#8a48e7]/5 to-[#5c21d2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
+
+                    {/* Icon */}
+                    {/* <div className="relative mb-4">
                                     <div className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                                         <service.icon className="w-7 h-7 text-white" />
                                     </div>
                                 </div> */}
 
-                                {/* Content */}
-                                {/* <div className="relative">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#5c21d2] transition-colors">
+                    {/* Content */}
+                    {/* <div className="relative">
+                                    <h3 className="text-xl poppins-bold text-gray-800 mb-3 group-hover:text-[#5c21d2] transition-colors">
                                         {service.title}
                                     </h3>
                                     <p className="text-gray-600 leading-relaxed text-sm">
@@ -228,10 +266,10 @@ export default function About() {
                                     </p>
                                 </div> */}
 
-                                {/* Decorative Element */}
-                                {/* <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8a48e7]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
+                    {/* Decorative Element */}
+                    {/* <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8a48e7]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
                             </motion.div> */}
-                        {/* // ))} */}
+                    {/* // ))} */}
                     {/* </motion.div> */}
 
                     {/* Final CTA Section */}
@@ -240,16 +278,16 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative"
+                        className="relative mb-36"
                     >
                         <div className="relative bg-gradient-to-br from-[#8a48e7] to-[#5c21d2] rounded-3xl p-12 md:p-16 shadow-2xl overflow-hidden">
                             {/* Decorative circles */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-                            
+
                             <div className="relative text-center max-w-3xl mx-auto">
                                 <Sparkles className="w-12 h-12 text-white mx-auto mb-6" />
-                                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                                <h2 className="text-2xl md:text-3xl poppins-bold text-white mb-6">
                                     Together, We Grow Stronger
                                 </h2>
                                 <p className="text-md text-white/95 mb-4 leading-relaxed">
@@ -258,11 +296,11 @@ export default function About() {
                                 <p className="text-md text-white/90 mb-8">
                                     Join us today and be part of a community that believes in <strong>collaboration over competition</strong>.
                                 </p>
-                                
+
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="group px-10 py-4 bg-white text-[#5c21d2] rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
+                                    className="group px-10 py-4 bg-white text-[#5c21d2] rounded-full poppins-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
                                     Join Cochin Connect Today
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -64,15 +64,15 @@ export default function Contact() {
         {
             icon: Phone,
             title: "Call Us",
-            details: "+91 99999 99999",
+            details: "+91 99466 89000",
             subtext: "Mon - Fri, 9 AM - 6 PM IST",
-            link: "tel:+919999999999"
+            link: "tel:+919946689000"
         },
         {
             icon: MapPin,
             title: "Visit Us",
-            details: "Kochi, Kerala, India",
-            subtext: "Meet us at our office",
+            details: "Cheranelloor, Ernakulam",
+            subtext: "Operation Office, Kochi",
             link: "#"
         }
     ];
@@ -185,7 +185,7 @@ export default function Contact() {
                                     </motion.div>
                                 )}
 
-                                <form onSubmit={handleSubmit} className="space-y-6">
+                                <div className="space-y-6">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -198,7 +198,6 @@ export default function Contact() {
                                                     name="name"
                                                     value={formData.name}
                                                     onChange={handleChange}
-                                                    required
                                                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#8a48e7] focus:ring-2 focus:ring-[#8a48e7]/20 transition-all"
                                                     placeholder="John Doe"
                                                 />
@@ -216,7 +215,6 @@ export default function Contact() {
                                                     name="email"
                                                     value={formData.email}
                                                     onChange={handleChange}
-                                                    required
                                                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#8a48e7] focus:ring-2 focus:ring-[#8a48e7]/20 transition-all"
                                                     placeholder="john@example.com"
                                                 />
@@ -268,7 +266,6 @@ export default function Contact() {
                                             name="message"
                                             value={formData.message}
                                             onChange={handleChange}
-                                            required
                                             rows="6"
                                             className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#8a48e7] focus:ring-2 focus:ring-[#8a48e7]/20 transition-all resize-none"
                                             placeholder="Tell us how we can help you..."
@@ -276,7 +273,7 @@ export default function Contact() {
                                     </div>
 
                                     <motion.button
-                                        type="submit"
+                                        onClick={handleSubmit}
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                         className="w-full py-4 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 group"
@@ -284,7 +281,7 @@ export default function Contact() {
                                         Send Message
                                         <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </motion.button>
-                                </form>
+                                </div>
                             </div>
                         </motion.div>
 

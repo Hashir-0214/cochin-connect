@@ -39,6 +39,7 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <div className="flex items-center space-x-3 mb-6">
                             <div className="relative">
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-xl blur-md opacity-50"></div>
                                 <img 
                                     src="/logo.png" 
                                     alt="Cochin Connect" 
@@ -123,13 +124,13 @@ export default function Footer() {
                                 <Mail className="w-5 h-5 mr-3 mt-0.5 text-[#8a48e7] group-hover:scale-110 transition-transform" />
                                 <span className="text-sm">info@cochinconnect.in</span>
                             </a>
-                            <a href="tel:+919999999999" className="flex items-start text-gray-400 hover:text-white transition-colors group">
+                            <a href="tel:+919946689000" className="flex items-start text-gray-400 hover:text-white transition-colors group">
                                 <Phone className="w-5 h-5 mr-3 mt-0.5 text-[#8a48e7] group-hover:scale-110 transition-transform" />
-                                <span className="text-sm">+91 99999 99999</span>
+                                <span className="text-sm">+91 99466 89000</span>
                             </a>
                             <div className="flex items-start text-gray-400">
                                 <MapPin className="w-5 h-5 mr-3 mt-0.5 text-[#8a48e7]" />
-                                <span className="text-sm">Kochi, Kerala, India</span>
+                                <span className="text-sm">Operation Office<br />Cheranelloor, Ernakulam<br />Kochi, Kerala</span>
                             </div>
                         </div>
 

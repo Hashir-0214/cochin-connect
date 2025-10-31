@@ -39,7 +39,6 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <div className="flex items-center space-x-3 mb-6">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-xl blur-md opacity-50"></div>
                                 <img 
                                     src="/logo.png" 
                                     alt="Cochin Connect" 

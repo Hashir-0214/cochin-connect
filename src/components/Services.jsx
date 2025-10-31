@@ -43,136 +43,71 @@ export default function Services() {
         {
             icon: Briefcase,
             title: "Job Bank",
-            description: "Connect skilled professionals with businesses seeking qualified candidates. Employers can post openings and discover top talent.",
-            features: [
-                "Verified candidate profiles",
-                "Direct employer connections",
-                "Industry-specific job boards",
-                "Resume building support"
-            ],
+            description: "Our Job Bank helps connect skilled professionals with businesses seeking qualified candidates. Employers can post openings and discover top talent, while job seekers can explore new career opportunities through verified business networks.",
             gradient: "from-blue-500 to-cyan-500"
         },
         {
             icon: Users,
             title: "Business Support",
-            description: "End-to-end business support including guidance, mentorship, and networking opportunities to help scale your ventures.",
-            features: [
-                "One-on-one mentorship",
-                "Strategic business planning",
-                "Network expansion support",
-                "Problem-solving sessions"
-            ],
+            description: "We provide end-to-end business support, including guidance, mentorship, and networking opportunities to help entrepreneurs scale their ventures and overcome challenges.",
             gradient: "from-purple-500 to-pink-500"
         },
         {
             icon: Rocket,
-            title: "Startup Support",
-            description: "Encouraging small businesses and startups by connecting them with investors, mentors, and collaborators.",
-            features: [
-                "Investor matchmaking",
-                "Pitch deck reviews",
-                "Funding guidance",
-                "Growth acceleration programs"
-            ],
+            title: "Micro Business & Startup Support",
+            description: "Our platform encourages small businesses and startups to grow by connecting them with investors, mentors, and potential collaborators. We believe in turning innovative ideas into successful enterprises.",
             gradient: "from-orange-500 to-red-500"
         },
         {
             icon: GraduationCap,
             title: "Business Training",
-            description: "Curated training programs, workshops, and seminars conducted by industry experts and business leaders.",
-            features: [
-                "Expert-led workshops",
-                "Certification programs",
-                "Skill development courses",
-                "Leadership training"
-            ],
+            description: "Through curated training programs, workshops, and seminars, Cochin Connect equips members with practical knowledge and skills essential for business growth and success. These sessions are conducted by industry experts and business leaders.",
             gradient: "from-green-500 to-emerald-500"
         },
         {
             icon: Award,
-            title: "Member Benefits",
-            description: "Priority access to events, mentorship programs, promotional opportunities, and exclusive networking sessions.",
-            features: [
-                "VIP event access",
-                "Priority support",
-                "Exclusive discounts",
-                "Premium networking"
-            ],
+            title: "Exclusive Member Benefits",
+            description: "Cochin Connect members enjoy priority access to events, mentorship programs, promotional opportunities, and more. Our goal is to make sure every member benefits personally and professionally from the network.",
             gradient: "from-yellow-500 to-orange-500"
         },
         {
             icon: Calendar,
-            title: "Networking Events",
-            description: "B2B expos, trade meets, and networking sessions to showcase products and form meaningful partnerships.",
-            features: [
-                "Monthly networking meets",
-                "Trade exhibitions",
-                "Industry conferences",
-                "Business mixers"
-            ],
+            title: "Business Expo & Networking Events",
+            description: "We host B2B expos, trade meets, and networking sessions designed to showcase your products and services while helping you form meaningful partnerships within the Cochin Connect community.",
             gradient: "from-indigo-500 to-purple-500"
         },
         {
             icon: UsersRound,
             title: "Women's Business Forum",
-            description: "Empowering platform for women entrepreneurs to share experiences, learn from experts, and grow together.",
-            features: [
-                "Women-led initiatives",
-                "Mentorship circles",
-                "Success story sharing",
-                "Collaborative projects"
-            ],
+            description: "An empowering platform exclusively for women entrepreneurs to share experiences, learn from experts, and grow together. The forum focuses on women-led business development, mentorship, and success stories.",
             gradient: "from-pink-500 to-rose-500"
         },
         {
             icon: Megaphone,
-            title: "Marketing Support",
-            description: "Comprehensive marketing assistance through digital campaigns, social media spotlights, and promotional channels.",
-            features: [
-                "Digital marketing campaigns",
-                "Social media management",
-                "Brand visibility programs",
-                "Content creation support"
-            ],
+            title: "Marketing and Advertising Support",
+            description: "We assist members in marketing their businesses effectively through Cochin Connect's promotional channels. From digital campaigns to social media spotlights, our marketing team ensures your brand reaches the right audience.",
             gradient: "from-cyan-500 to-blue-500"
         },
         {
             icon: Globe,
-            title: "E-Business Solutions",
-            description: "Guidance on e-commerce integration, digital transformation, and online branding for traditional businesses.",
-            features: [
-                "E-commerce setup",
-                "Digital transformation",
-                "Online store optimization",
-                "Digital payment integration"
-            ],
+            title: "E-Business",
+            description: "For businesses looking to expand into digital and online markets, Cochin Connect offers guidance on e-commerce integration, digital transformation, and online branding. Our team helps traditional businesses adapt and succeed in the digital age.",
             gradient: "from-teal-500 to-green-500"
         },
         {
             icon: TrendingUp,
-            title: "Entrepreneurship Program",
-            description: "Structured initiative providing training, financial literacy, mentorship, and networking opportunities.",
-            features: [
-                "Financial literacy training",
-                "Business model development",
-                "Mentorship matching",
-                "Growth strategy planning"
-            ],
+            title: "Entrepreneurship Development Program",
+            description: "A structured initiative to encourage entrepreneurship by providing training, financial literacy, mentorship, and networking opportunities. We aim to create confident entrepreneurs capable of driving sustainable business growth.",
             gradient: "from-violet-500 to-purple-500"
         },
         {
             icon: Heart,
-            title: "Philanthropic Lounge",
-            description: "Supporting socially responsible business initiatives and corporate social responsibility programs.",
-            features: [
-                "CSR program development",
-                "Community engagement",
-                "Impact measurement",
-                "Sustainable business practices"
-            ],
+            title: "Philanthropic Business Lounge",
+            description: "Cochin Connect also supports socially responsible business initiatives. Through the Philanthropic Business Lounge, we encourage members to engage in community development and corporate social responsibility programs that make a real difference.",
             gradient: "from-red-500 to-pink-500"
         }
     ];
+
 
     const stats = [
         { icon: Users, value: "500+", label: "Active Members" },
@@ -250,61 +185,42 @@ export default function Services() {
                         ))}
                     </motion.div>
 
-                    {/* Services Grid */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="grid md:grid-cols-2 gap-8 mb-20"
+                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
                     >
                         {services.map((service, index) => (
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
-                                whileHover={{ y: -8 }}
-                                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 overflow-hidden"
+                                whileHover={{ y: -8, scale: 1.02 }}
+                                className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 overflow-hidden"
                             >
                                 {/* Gradient Background on Hover */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#8a48e7]/5 to-[#5c21d2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 
-                                <div className="relative">
-                                    {/* Icon and Title */}
-                                    <div className="flex items-start gap-4 mb-4">
-                                        <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
-                                            <service.icon className="w-8 h-8 text-white" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-2xl font-bold text-gray-800 group-hover:text-[#5c21d2] transition-colors">
-                                                {service.title}
-                                            </h3>
-                                        </div>
+                                {/* Icon */}
+                                <div className="relative mb-4">
+                                    <div className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                                        <service.icon className="w-7 h-7 text-white" />
                                     </div>
+                                </div>
 
-                                    {/* Description */}
-                                    <p className="text-gray-600 leading-relaxed mb-6">
+                                {/* Content */}
+                                <div className="relative">
+                                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#5c21d2] transition-colors">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-gray-600 leading-relaxed text-sm">
                                         {service.description}
                                     </p>
-
-                                    {/* Features */}
-                                    <div className="space-y-3">
-                                        {service.features.map((feature, idx) => (
-                                            <div key={idx} className="flex items-center gap-3">
-                                                <CheckCircle className="w-5 h-5 text-[#8a48e7] flex-shrink-0" />
-                                                <span className="text-gray-700 text-sm">{feature}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    {/* Learn More Button */}
-                                    <button className="mt-6 text-[#5c21d2] font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                                        Learn More
-                                        <ArrowRight className="w-4 h-4" />
-                                    </button>
                                 </div>
 
                                 {/* Decorative Element */}
-                                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#8a48e7]/10 to-transparent rounded-full -translate-y-20 translate-x-20 group-hover:scale-150 transition-transform duration-500"></div>
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#8a48e7]/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
                             </motion.div>
                         ))}
                     </motion.div>

@@ -157,7 +157,7 @@ export default function About() {
 
                         <motion.p
                             variants={itemVariants}
-                            className="text-lg text-gray-600 max-w-4xl mx-auto mt-6 leading-relaxed"
+                            className="max-w-3xl text-lg text-gray-600 mx-auto mt-6 leading-relaxed"
                         >
                             Cochin Connect is designed to bring together entrepreneurs, professionals, and businesses under one trusted platform — creating an ecosystem of collaboration, innovation, and growth.
                         </motion.p>
@@ -247,22 +247,22 @@ export default function About() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
                             
-                            <div className="relative text-center max-w-4xl mx-auto">
-                                <Sparkles className="w-16 h-16 text-white mx-auto mb-6" />
-                                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            <div className="relative text-center max-w-3xl mx-auto">
+                                <Sparkles className="w-12 h-12 text-white mx-auto mb-6" />
+                                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                                     Together, We Grow Stronger
                                 </h2>
-                                <p className="text-xl text-white/95 mb-4 leading-relaxed">
+                                <p className="text-md text-white/95 mb-4 leading-relaxed">
                                     Cochin Connect isn't just a platform — it's a movement to connect, discover, and experience new possibilities in the world of business.
                                 </p>
-                                <p className="text-lg text-white/90 mb-8">
+                                <p className="text-md text-white/90 mb-8">
                                     Join us today and be part of a community that believes in <strong>collaboration over competition</strong>.
                                 </p>
                                 
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="group px-10 py-4 bg-white text-[#5c21d2] rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3"
+                                    className="group px-10 py-4 bg-white text-[#5c21d2] rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-3 cursor-pointer"
                                 >
                                     Join Cochin Connect Today
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

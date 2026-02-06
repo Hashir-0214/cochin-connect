@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import {
-    Sparkles,
     Target,
     Users,
     Lightbulb,
@@ -12,12 +11,7 @@ import {
     Rocket,
     GraduationCap,
     Calendar,
-    Mail,
-    Phone,
-    MapPin,
     UsersRound,
-    Contact,
-    Contact2,
     Link2
 } from 'lucide-react';
 import { Link } from 'react-router-dom';

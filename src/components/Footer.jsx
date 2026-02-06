@@ -119,9 +119,9 @@ export default function Footer() {
                         
                         {/* Contact Info */}
                         <div className="space-y-4 mb-6">
-                            <a href="mailto:info@cochinconnect.in" className="flex items-start text-gray-400 hover:text-white transition-colors group">
+                            <a href="mailto:cochinconnect01@gmail.com" className="flex items-start text-gray-400 hover:text-white transition-colors group">
                                 <Mail className="w-5 h-5 mr-3 mt-0.5 text-[#8a48e7] group-hover:scale-110 transition-transform" />
-                                <span className="text-sm">info@cochinconnect.in</span>
+                                <span className="text-sm">cochinconnect01@gmail.com</span>
                             </a>
                             <a href="tel:+919946689000" className="flex items-start text-gray-400 hover:text-white transition-colors group">
                                 <Phone className="w-5 h-5 mr-3 mt-0.5 text-[#8a48e7] group-hover:scale-110 transition-transform" />

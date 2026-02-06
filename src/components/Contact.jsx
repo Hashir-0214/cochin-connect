@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { 
-    Mail, 
-    Phone, 
-    MapPin, 
-    Send, 
+import {
+    Mail,
+    Phone,
+    MapPin,
+    Send,
     MessageSquare,
     Clock,
     Building,
@@ -141,7 +141,7 @@ export default function Contact() {
                                 className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 overflow-hidden text-center"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#8a48e7]/5 to-[#5c21d2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                
+
                                 <div className="relative">
                                     <div className="w-16 h-16 bg-gradient-to-r from-[#8a48e7] to-[#5c21d2] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                                         <info.icon className="w-8 h-8 text-white" />
